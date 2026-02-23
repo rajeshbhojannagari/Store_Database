@@ -1,0 +1,36 @@
+body {
+    font-family: Arial;
+    background: #f4f6f8;
+    margin: 0;
+}
+
+nav {
+    background: #1e88e5;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    margin: 30px auto;
+    width: 80%;
+    box-shadow: 0 0 10px #ccc;
+}
+
+button {
+    background: #1e88e5;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+}
+
+img {
+    border-radius: 8px;
+}
