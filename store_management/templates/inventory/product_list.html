@@ -1,0 +1,23 @@
+<h1>Product List</h1>
+
+<a href="/inventory/add/">Add Product</a>
+<br><br>
+
+{% for product in products %}
+    <div>
+
+        <h3>{{ product.name }}</h3>
+
+        {% if product.image %}
+            <img src="{{ product.image.url }}" width="150">
+        {% endif %}
+
+        <p>Price: ₹{{ product.price }}</p>
+        <p>Stock: {{ product.stock }}</p>
+
+        <a href="/inventory/update/{{ product.id }}/">Edit</a>
+        <a href="/inventory/delete/{{ product.id }}/">Delete</a>
+
+    </div>
+    <hr>
+{% endfor %}
