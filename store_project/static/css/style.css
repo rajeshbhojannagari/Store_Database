@@ -1,36 +1,148 @@
-body {
-    font-family: Arial;
-    background: #f4f6f8;
+*{
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
-
-nav {
-    background: #1e88e5;
-    padding: 15px;
+body{
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: #f7f5f2;
+    color: #2d2d2d;
 }
-
+nav{
+    background: #1f1f1f;
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid #d97706;
+}
+nav .brand {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fbbf24;
+    margin-right: 40px;
+}
 nav a {
-    color: white;
-    margin-right: 20px;
+    color: #e5e5e5;
+    margin-right: 22px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    transition: 0.25s;
+}
+nav a:hover {
+    color: #fbbf24;
 }
 
 .container {
-    background: white;
-    padding: 20px;
-    margin: 30px auto;
-    width: 80%;
-    box-shadow: 0 0 10px #ccc;
+    width: 92%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 28px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 18px;
+    border: 1px solid #ece7e1;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+    margin-top: 12px;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.product-image {
+    position: relative;
+    text-align: center;
+}
+
+.product-image img {
+    width: 100%;
+    max-width: 240px;
+    border-radius: 10px;
+}
+
+.out-label {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(220, 38, 38, 0.9);
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+.product-image:has(.out-label) img {
+    opacity: 0.4;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #059669; 
 }
 
 button {
-    background: #1e88e5;
-    color: white;
-    padding: 8px 16px;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
     border: none;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.25s;
+    margin-top: 10px;
 }
 
-img {
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(217,119,6,0.4);
+}
+
+button:disabled {
+    background: #bdbdbd;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 11px;
+    margin-top: 6px;
+    margin-bottom: 14px;
     border-radius: 8px;
+    border: 1px solid #d6d3d1;
+    background: #fafaf9;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #f59e0b;
+    background: #fff;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+.right {
+    margin-left: auto;
+    color: #e5e5e5;
 }
